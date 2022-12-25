@@ -8,6 +8,18 @@
     <title>Blog</title>
 </head>
 <body>
-    <h1> <%= articles %></h1> 
+    <div class="container">
+        <h1 class="mb-4">Blog Articles</h1>
+        <a href="/article/new" class="btn btn-success"> New Article</a>
+
+        <% articles.forEach(article => { %>
+        <div class="card mt-4">
+            <div class="card body">
+                <h4 class="card title"><%= article.title %></h4>
+                <div class="sub-title text-muted mb-2"><%= article.date.toLocaleDateString() %></div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
 </body>
 </html>
