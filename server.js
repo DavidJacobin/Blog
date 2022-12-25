@@ -1,8 +1,14 @@
 const express = require('express');
-const articleRouter = require('./routes/articles.js');
+const mongoose = require('mongoose')
 const app = express();
+const articleRouter = require('./routes/articles.js');
+
+
+mongoose.connect('mongodb://127.0.0.1:27017',{useNewUrlParser: true})
+
 
 app.set('view engine', 'ejs');
+app.use(express.urlencoded({extended: false}))
 
 app.use('/article',articleRouter)
 
