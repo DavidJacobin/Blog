@@ -4,7 +4,7 @@ const app = express();
 
 app.set('view engine', 'ejs');
 
-app.use('/articles',articleRouter)
+app.use('/article',articleRouter)
 
 app.get("/", (req,res)=>{
     const articles = [{
