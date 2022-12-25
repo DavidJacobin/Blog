@@ -1,3 +1,3 @@
 # Blog
  
-JavaScript, MonogDB and EJS
+JavaScript, MonogDB, EJS and BootStrap
